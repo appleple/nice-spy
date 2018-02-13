@@ -1,5 +1,5 @@
 # Nice Spy
-A library used to update classname of links based on scroll position
+A library used to update classnames of links based on scroll position
 
 ## Demos
 
@@ -25,9 +25,9 @@ yarn add nice-spy
 ```html
 <nav>
   <ul>
-    <li><a href="#section1">section1</a></li>
-    <li><a href="#section2">section2</a></li>
-    <li><a href="#section3">section3</a></li>
+    <li><a href="#section1" class="js-nicespy">section1</a></li>
+    <li><a href="#section2" class="js-nicespy">section2</a></li>
+    <li><a href="#section3" class="js-nicespy">section3</a></li>
   </ul>
 </nav>
 <section data-spy="section1">
