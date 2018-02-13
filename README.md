@@ -43,6 +43,6 @@ yarn add nice-spy
 
 ```js
 new NiceSpy('.js-nicespy', {
-  offsetTop: 20, // space between the sticky element and the top of the window
+  offsetTop: 20,
 });
 ```
