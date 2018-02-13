@@ -1,5 +1,7 @@
 import { getScrollTop, getOffset, outerHeight, addClass, removeClass } from '../lib';
 
+const assign = require('es6-object-assign').assign;
+
 const defaults = {
   offsetTop: 0,
   target: '[data-spy]',
@@ -9,7 +11,7 @@ const defaults = {
 
 export default class ScrollSpy {
   constructor(ele, opt) {
-    this.opt = Object.assign({}, defaults, opt);
+    this.opt = assign({}, defaults, opt);
     this.targetElements = typeof ele === 'string' ? document.querySelectorAll(ele) : ele;
     this.sections = typeof this.opt.target === 'string' ? document.querySelectorAll(this.opt.target) : this.opt.target;
     window.addEventListener('scroll', () => {
