@@ -119,7 +119,7 @@ var ScrollSpy = function () {
       });
       if (find) {
         var attr = find.getAttribute(this.opt.targetAttr);
-        var target = [].forEach.call(this.targetElements, function (item) {
+        [].forEach.call(this.targetElements, function (item) {
           var href = item.getAttribute('href');
           if (href.replace('#', '') === attr) {
             (0, _lib.addClass)(item, _this2.opt.className);

@@ -21,10 +21,10 @@ export default class ScrollSpy {
 
   onScroll() {
     const scroll = getScrollTop();
-    const { offsetTop } = this.opt; 
+    const { offsetTop } = this.opt;
     const find = [].find.call(this.sections, (item) => {
       const top = getOffset(item).top;
-      const height = outerHeight(item); 
+      const height = outerHeight(item);
       if (scroll + offsetTop >= top && scroll + offsetTop <= top + height) {
         return true;
       }
@@ -32,7 +32,7 @@ export default class ScrollSpy {
     });
     if (find) {
       const attr = find.getAttribute(this.opt.targetAttr);
-      const target = [].forEach.call(this.targetElements, (item) => {
+      [].forEach.call(this.targetElements, (item) => {
         const href = item.getAttribute('href');
         if (href.replace('#', '') === attr) {
           addClass(item, this.opt.className);
